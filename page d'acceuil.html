@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Accueil</title>
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+   <script src="java script/scripteprincipale.js"></script>
+</head>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const headerTitle = document.querySelector('#header h1');
+  if (headerTitle) {
+    headerTitle.style.opacity = 0;
+    headerTitle.style.transition = 'opacity 1.5s ease-in-out';
+    setTimeout(() => {
+      headerTitle.style.opacity = 1;
+    }, 100);
+  }
+
+
+  const navLinks = document.querySelectorAll('.nav-accueil a');
+  navLinks.forEach(link => {
+    link.style.transition = 'color 0.3s ease';
+    link.addEventListener('mouseenter', () => {
+      link.style.color = '#D2691E';  
+      link.style.fontWeight = 'bold';
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.color = '';
+      link.style.fontWeight = '';
+    });
+  });
+
+  
+  console.log('Bienvenue sur le site de Marrakech ! 🌴');
+});
+</script>
+<body class="page-accueil">
+
+  <header id="header">
+    <h1>Explorez Marrakech, entre tradition et modernité</h1>
+    <div class="logo">
+      <img src="logo.svg" alt="logo Maroc" />
+    </div>
+  </header>
+
+  <nav class="nav-accueil">
+    <ul>
+      <li class="nav-dacceuil">
+        <a href="page d'acceuil.html">🏠 Accueil</a>
+      </li>
+      <li class="nav-patrimoine">
+        <a href="page patrimoine.html">🏛️ Patrimoine</a>
+      </li>
+      <li class="nav-reservation">
+        <a href="page de reservation .html">🏨 Réservation</a>
+      </li>
+      <li class="nav-galerie">
+        <a href="page galerie.html">📸 Galerie</a>
+      </li>
+    </ul>
+  </nav>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <p>📍 Adresse : Avenue Hassan II, Marrakech, Maroc</p>
+        <p>📞 Téléphone : +212 5 24 00 00 00</p>
+        <p>✉️ Email : contact@riad-maroc.com</p>
+        <p>TP HTML - ESI</p>
+        <p>👨‍💻 Kabore Abdoul Nassir & Traoré Issiaka</p>
+        <div class="footer-bottom">
+          <p>© 2025 Riad Marrakech. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
